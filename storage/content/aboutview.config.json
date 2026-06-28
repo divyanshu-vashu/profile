@@ -1,0 +1,103 @@
+{
+  "profile": {
+    "displayName": "Divyanshu Singh",
+    "username": "@divyanshu_dev",
+    "bio": "I am an architect of digital experiences, bridging the gap between raw computational capability and intuitive human interface. My work centers on designing systems that are robust, scalable, and inherently beautiful.",
+    "avatarBg": "#2f2f2f",
+    "socials": {
+      "github": "https://github.com/divyanshu",
+      "linkedin": "https://linkedin.com/in/divyanshu",
+      "website": "https://divyanshu.dev"
+    }
+  },
+  "socialLabels": {
+    "github": "Github Coordinates",
+    "linkedin": "LinkedIn Footprint",
+    "website": "Personal Website"
+  },
+  "metrics": [
+    {
+      "label": "Host SLA Uptime",
+      "value": "99.99%",
+      "description": "Guaranteed by Kubernetes orchestrations.",
+      "type": "uptime"
+    },
+    {
+      "label": "Target Alignment",
+      "value": "100%",
+      "description": "Pristine typographic scale synchronization.",
+      "type": "alignment"
+    },
+    {
+      "label": "LCP Index Target",
+      "value": "< 400ms",
+      "description": "Ultra-fast client asset caching parities.",
+      "type": "lcp"
+    }
+  ],
+  "skillsData": {
+    "All": [
+      "Executing skills.sh --all",
+      "Initializing environment diagnostics...",
+      "SYSTEM CORES ONLINE: Vellore Institute of Technology (CSE with AI & Robotics)",
+      "",
+      "--- CORE SKILLS MATRIX ---",
+      "LANGUAGES : Python, Go, C++, C, JavaScript, SQL, NoSQL",
+      "WEB TECH  : Next.js, React.js, Node.js, GraphQL, PostgreSQL, MongoDB, Redis",
+      "DEVOPS/OPS: Docker, Kubernetes, CI/CD (GitHub Actions), AWS, Azure, GCP",
+      "CONCEPTS  : DSA, OOPS, Operating Systems, Networking, AI, Kafka, Cadence",
+      "",
+      "Diagnostics exit code: 0 (SUCCESS)"
+    ],
+    "Frontend": [
+      "Executing skills.sh --frontend",
+      "Retrieving interface indices...",
+      "--- FRONTEND STACK COORDINATES ---",
+      "  - Frameworks: Next.js, React.js, React Native (Expo)",
+      "  - Interactive: Three.js (3D design platforms), TailwindCSS",
+      "  - JavaScript & TypeScript, HTML/CSS, UI/UX performance optimization",
+      "",
+      "Indices successfully mapped."
+    ],
+    "Backend": [
+      "Executing skills.sh --backend",
+      "Scanning application gateways...",
+      "--- BACKEND CONTROLLERS ---",
+      "  - Languages: Go (robust concurrency), Python (AI pipelines), Node.js, Java",
+      "  - APIs & Orchestration: REST APIs, GraphQL, Kafka, Cadence workflows",
+      "  - Databases: PostgreSQL, MongoDB, Redis, Oracle SQL",
+      "",
+      "Gateways validated: 100% operational."
+    ],
+    "Systems": [
+      "Executing skills.sh --systems",
+      "Querying container configurations...",
+      "--- OPS & SYSTEMS ---",
+      "  - Infrastructure: Docker, Kubernetes, CI/CD automation pipelines",
+      "  - Cloud Platforms: AWS (EC2, S3, Lambda), Azure, GCP",
+      "  - Low Level: OS kernel tweaks, EvolutionX custom ROM optimizations",
+      "",
+      "Cluster registry sync complete."
+    ]
+  },
+  "careerTimeline": [
+    {
+      "year": "Oct 2025 - Present",
+      "role": "Software Engineer",
+      "company": "Infiniti Research",
+      "description": "Architected end-to-end Gen AI report pipelines, Vega visualization servers, and LangFlow orchestration layers. Engineered high-timeout MCP server-client architectures, an internal SRE ticket agent system, the WebScroll anti-bot browser scraping infrastructure, and fine-tuned mT5-XL on 1.5M pairs for Japanese translation at scale."
+    },
+    {
+      "year": "Jan 2025 - Jul 2025",
+      "role": "Software Engineer",
+      "company": "Appointy",
+      "description": "Delivered a multi-tenant microservice notification system with <2% bounce rate. Reduced Google Calendar sync errors by >99.9% and built high-throughput Chatbot MCP servers processing 1M+ records."
+    },
+    {
+      "year": "Apr 2024 - Dec 2024",
+      "role": "Full-Stack Developer",
+      "company": "SpectoV",
+      "description": "Led MERN/Next.js corporate platform development with 3D elements (Three.js), boosting engagement by 25%. Deployed LLM sound detection & translation pipelines. Trained 10+ junior developers."
+    }
+  ]
+}

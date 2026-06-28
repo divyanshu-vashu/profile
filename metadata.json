@@ -1,0 +1,6 @@
+{
+  "name": "AI Portfolio Command Center",
+  "description": "An interactive, full-stack AI-powered developer portfolio, technical blog, and literary catalog.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

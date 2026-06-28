@@ -1,0 +1,12 @@
+{
+  "title": "DevEnv Automator",
+  "description": "A CLI tool that instantly provisions containerized development environments using Docker and Go.",
+  "featured": false,
+  "status": "completed",
+  "tags": ["Go", "Docker", "CLI"],
+  "cover": "assets/devenv.png",
+  "github": "https://github.com/divyanshu/devenv-automator",
+  "demo": "",
+  "category": "CLI Tools",
+  "icon": "terminal"
+}

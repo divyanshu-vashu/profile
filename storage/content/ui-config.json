@@ -1,0 +1,8 @@
+{
+  "navigation": [
+    { "name": "Projects", "icon": "FolderKanban", "label": "Projects" },
+    { "name": "Blog", "icon": "BookOpen", "label": "Blog" },
+    { "name": "Library", "icon": "ThumbsUp", "label": "Recommendations" }
+  ],
+  "recents": []
+}

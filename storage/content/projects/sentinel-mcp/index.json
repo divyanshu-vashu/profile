@@ -1,0 +1,12 @@
+{
+  "title": "Sentinel MCP",
+  "description": "Runtime Governance Layer for AI Agents",
+  "featured": true,
+  "status": "active",
+  "tags": ["ai", "mcp", "security"],
+  "cover": "assets/cover.png",
+  "github": "https://github.com/divyanshu/sentinel-mcp",
+  "demo": "https://sentinel.divyanshu.dev",
+  "category": "Security Tools",
+  "icon": "terminal"
+}

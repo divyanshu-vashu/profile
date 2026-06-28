@@ -1,0 +1,115 @@
+Divyanshu Singh
+Bengaluru,Karnataka
++91-7295004615 vashusingh2005.jan@gmail.com divyanshu-vashu divyanshu-vashu
+EDUCATION
+Vellore Institute of Technology B.Tech in CSE with AI and Robotics - CGPA- 8.74 EXPERIENCE
+Aug 2021 – Jul 2025
+Chennai, India
+Infiniti Research Oct 2025 – Present
+Software Engineer Bengaluru, India
+• Architected an end-to-end Gen AI report pipeline, orchestrating LLM content generation, dynamic data
+visualization via Vega Server, and final rendering using Jinja templates to automate report creation.
+• Implemented a LangFlow-based orchestration layer that decoupled workflow creation from engineering,
+making managers developer-independent and significantly reducing cross-functional interaction overhead.
+• Engineered a Model Context Protocol (MCP) server-client architecture handling 10+ minute
+inference timeouts, enabling the generation of 250+ page market reports via prompt engineering.
+Appointy Jan 2025 – Jul 2025
+Software Engineer Bhopal, India
+• Architected and delivered a scalable, multi-tenant notification system using microservices architecture,
+achieving less than 2% Bounce rate for a high-volume SaaS platform.
+• Engineered a robust solution that reduced event synchronization errors between Google Calendar and the
+native Appointy Calendar by over 99.9%, improving data consistency.
+• Developed a high-throughput Chatbot MCP server capable of processing and analyzing over 1 million
+data records, enhancing customer engagement and data insights.
+SpectoV Apr 2024 – Dec 2024
+Full-Stack Developer Chennai, India
+• Led the end-to-end development of SpectoV’s corporate platform using the MERN stack and Next.js,
+integrating 3D elements that increased user engagement by 25% and enhanced UI/UX performance.
+• Engineered and deployed AI-powered solutions, including an LLM-driven sound detection and multilingual
+translation pipeline and an intelligent interview system, achieving 90% automation efficiency.
+• Directed technical enablement by training 10+ junior developers , while automating CI/CD pipelines
+and configuring AWS/Azure cloud infrastructure, which boosted deployment frequency by 50%.
+Open Source Contributor
+EvolutionX |C ,AOSP, Kernal, firmware, Operating System
+• Optimized ROM performance by conducting benchmark tests and identifying areas for improvement, resulting
+in a 15% increase in overall system speed and responsiveness on POCO devices.
+Traefik |GO, reverse-proxy, load-balancer
+• Design a adapter pattern approach for Allow setting tcp.services.¡service-name¿.loadbalancer.servers[0].address
+via labels
+OpenTofu |GO, CloudService, Infrastructure as Code (IaC)
+• work 3+ issue, 1 pr merge , give a code design for File-scoped local value definitions,Remove GODEBUG
+winsymlink=0 from our go.mod ,Implement OCI support in Dependabot for the fileparser.
+GSSoC ’24 |Open Source, Multiple Repositories,NodeJs
+• have participated and contributed in 3 repositories by raising issues as well as merging pull requests.
+TECHNICAL SKILLS
+Languages: Python, Go, C++, C, JavaScript, SQL, NoSQL
+Web Technologies: Next.js, React.js, Node.js, REST APIs, GraphQL, PostgreSQL, MongoDB, Redis
+DevOps & Cloud: Docker, Kubernetes, CI/CD (GitHub Actions), AWS (EC2, S3, Lambda), Azure, GCP
+Core Concepts: Data Structures & Algorithms, OOPS, Operating Systems, Networking, AI, Kafka, Cadence
+PROJECTS
+Badminton Room Android App |ReactNative , Expo, Golang
+• Developed a room feature for up to 16 players, ensuring real-time score management under 200ms latency.
+• Used WebSockets for remote score viewing, broadcasting live updates to 100+ simultaneous spectators.
+• Live site here
+Anydata into RAG |Python, RAG, VectorDB, GROQ, LLM, LangChain,
+• Designed a Retrieval-Augmented Generation (RAG) system integrating AnyData with FAISS and LangChain,
+enabling contextualized responses from 10k+ documents.
+• Built a modular ingestion and vectorization pipeline for unstructured data (PDFs, text files).
+Apna Trio Book |MERN Stack, JWT Auth, PayPal, MongoDB, NodeJs, Cloudinary
+• Built a full-featured platform managing an initial inventory of over 500+ books for Buy, Rent, and Share.
+• Designed a scalable client-server architecture that achieved an average API response time of under 150ms, with
+secure payments via PayPal.
+AI Editor |JavaScript , Agent, Embedding Model, Gemini llm
+• Created an autonomous AI-powered code editor that reads 100+ files, generates code, and embeds changes
+intelligently using embedding models.
+• Codebase Summarization feature for non-tech and tech, improving clarity for 50+ users.
+Loan Management |SpringBoot, JWT Auth, Oracle SQL, Java
+• Developed a full-featured Loan Management Application, implementing a 3-tier role system (User, Admin,
+Super Admin) to streamline loan application, verification, and approval workflows.
+• Designed a scalable client-server architecture that achieved an average API response time of under 150ms
+UAV Small Based Object Detection |Python, Opencv, YoloV8, Computer Vision
+• Designed a UAV model for detecting small objects with 90%+ accuracy using Weighted Box Fusion.
+• Annotated 5k+ data samples and Forge an automated email and wireless alert system reducing response time.
+Freelancing Projects
+Edtech Web |React
+• Developed an interactive educational platform using React.
+Cleaning Company |Next.js, React
+• Built a modern company website with booking workflow and service management.
+3D Design Platform |Three.js, React
+• Created a 3D interactive design experience leveraging Three.js and React.
+One Nexus |IoT Control — Node.js (Server), React (Web), React Native (Mobile)
+• Implemented an IoT control ecosystem including backend services, web dashboards, and mobile interfaces.
+CERTIFICATIONS
+•Artificial Intelligence A-Z• Web Development (MERN)
+• Google Cloud Computing•Java SpringBoot
+
+
+
+memory:
+  - title: Agentic Market Intelligence
+    summary: Built AI agents that generate 300-page market research reports in ~30 minutes, reducing research turnaround from days to minutes.
+
+  - title: Market Forecasting Platform
+    summary: Redesigned forecasting architecture from XGBoost to FinBERT + Prophet, improving explainability through sentiment-driven market signals.
+
+  - title: RAG Chatbot & Semantic Cache
+    summary: Built enterprise RAG chatbot with semantic caching, reducing LLM costs by 77% and improving response latency.
+
+  - title: WebScroll
+    summary: Built anti-bot web scraping infrastructure, saving ~$5K/month and enabling large-scale data collection for AI systems.
+
+  - title: Resume Builder
+    summary: Created AI-powered resume platform using JSON-driven templates, versioning, live preview, and AI-assisted rewriting.
+
+  - title: Custom Android ROM
+    summary: Built and maintained Android 16 custom ROM for POCO X5 Pro, extending device support beyond official updates.
+
+  - title: Chrome Productivity Extension
+    summary: Automated repetitive workflows, reducing task time from 30 minutes to under 1 minute for 26+ teammates.
+
+  - title: Disk Cleaner Utility
+    summary: Developed system cleanup tool adopted internally for storage analysis and bulk file management.
+
+  - title: Translation Infrastructure
+    summary: Fine-tuned mT5-XL on 1.5M English→Japanese pairs, outperforming baseline models while reducing translation costs.
+
