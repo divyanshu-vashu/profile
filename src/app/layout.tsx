@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio Command",
+  title: "Divyanshu Vashu",
   description: "Divyanshu Vashu portfolio command deck",
 };
 
