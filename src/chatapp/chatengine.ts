@@ -7,6 +7,11 @@ import {
   executeReadFile,
   executeGrepContent,
 } from "./libs/tools/content-reader";
+import { executeSendEmail } from "./libs/tools/email";
+import {
+  executeGetAvailability,
+  executeCreateBooking,
+} from "./libs/tools/check-calendar";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -47,7 +52,7 @@ interface ApiResponse {
 async function dispatchToolCall(toolCall: ToolCall): Promise<string> {
   const { name, arguments: argsStr } = toolCall.function;
 
-  let args: Record<string, string>;
+  let args: Record<string, any>;
   try {
     args = JSON.parse(argsStr);
   } catch {
@@ -65,6 +70,33 @@ async function dispatchToolCall(toolCall: ToolCall): Promise<string> {
 
     case "grep_content":
       return executeGrepContent(args.directory ?? "", args.query ?? "");
+
+    case "send_email":
+      return executeSendEmail({
+        who: args.who ?? "",
+        query: args.query ?? "",
+        email: args.email,
+        why: args.why,
+      });
+
+    case "get_availability":
+      return executeGetAvailability({
+        startTime: args.startTime ?? "",
+        endTime: args.endTime ?? "",
+        timeZone: args.timeZone,
+        duration: args.duration ? Number(args.duration) : undefined,
+      });
+
+    case "create_booking":
+      return executeCreateBooking({
+        startTime: args.startTime ?? "",
+        attendeeName: args.attendeeName ?? "",
+        attendeeEmail: args.attendeeEmail ?? "",
+        attendeeTimezone: args.attendeeTimezone ?? "",
+        why: args.why ?? "",
+        whoAreYou: args.whoAreYou ?? "",
+        duration: args.duration ? Number(args.duration) : undefined,
+      });
 
     default:
       return JSON.stringify({ error: `Unknown tool: "${name}"` });
@@ -175,7 +207,8 @@ async function runAgentLoop(
 // ---------------------------------------------------------------------------
 
 export async function handleChat(
-  messages: { role: "user" | "assistant"; content: string }[]
+  messages: { role: "user" | "assistant"; content: string }[],
+  userContext?: { localTime: string; timeZone: string }
 ) {
   const llmApiKey = process.env.LLM_API;
   const geminiApiKey = process.env.GEMINI_API;
@@ -191,7 +224,14 @@ export async function handleChat(
   } catch (err) {
     console.error("Failed to read prompt.txt, using basic fallback", err);
     systemInstruction =
-      "You are the AI Assistant for Divyanshu Singh's professional portfolio.";
+      "You are the AI Assistant for Divyanshu Vashu's professional portfolio.";
+  }
+
+  // Inject current datetime / timezone context directly
+  if (userContext) {
+    systemInstruction += `\n\n[Current User Context]:\n- User's Local Time: ${userContext.localTime}\n- User's Timezone: ${userContext.timeZone || "Asia/Kolkata"}\n`;
+  } else {
+    systemInstruction += `\n\n[Current User Context]:\n- Local Time: ${new Date().toString()}\n`;
   }
 
   const apiMessages: Message[] = [

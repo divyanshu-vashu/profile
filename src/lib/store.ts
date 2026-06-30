@@ -1,16 +1,16 @@
 import { ArchivedProject, BlogItem, ProfileDetails, Project, RecommendationItem } from "@/types";
 
 export const profile: ProfileDetails = {
-  displayName: "Divyanshu Singh",
-  username: "@divyanshu_dev",
-  email: "hello@divyanshu.dev",
-  phone: "+1 (555) 000-0000",
+  displayName: "Divyanshu Vashu",
+  username: "@divyanshu-vashu",
+  email: "vashusingh2004.jan@gmail.com",
+  phone: "+917295004615",
   bio: "I am an architect of digital experiences, bridging the gap between raw computational capability and intuitive human interface. My work centers on designing systems that are robust, scalable, and inherently beautiful.",
   avatarBg: "#2f2f2f",
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    website: "https://divyanshu.dev",
+    github: "https://github.com/divyanshu-vashu",
+    linkedin: "https://linkedin.com/in/divyanshu-vashu",
+    website: "https://sarugeek.com",
   },
 };
 

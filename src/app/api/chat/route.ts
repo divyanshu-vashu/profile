@@ -3,13 +3,13 @@ import { handleChat } from "@/chatapp/chatengine";
 
 export async function POST(request: Request) {
   try {
-    const { messages } = await request.json();
+    const { messages, userContext } = await request.json();
 
     if (!messages || !Array.isArray(messages)) {
       return NextResponse.json({ error: "Invalid messages array." }, { status: 400 });
     }
 
-    const result = await handleChat(messages);
+    const result = await handleChat(messages, userContext);
     return NextResponse.json(result);
   } catch (error) {
     const message = error instanceof Error ? error.message : "An error occurred with the AI assistant.";

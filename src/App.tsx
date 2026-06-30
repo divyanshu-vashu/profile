@@ -23,7 +23,7 @@ import ProjectsView from "./components/ProjectsView";
 import AboutView from "./components/AboutView";
 import ProfileModal from "./components/ProfileModal";
 import SettingsModal from "./components/SettingsModal";
-import { ProfileDetails } from "./types";
+import { ProfileDetails, ChatMessage } from "./types";
 
 type TabName = "Home" | "Library" | "Projects" | "Blog" | "About";
 
@@ -62,6 +62,7 @@ export default function App() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(false);
   const [navItems, setNavItems] = useState<any[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   /* ── On mount: restore preferences & fetch data ──────────────── */
   useEffect(() => {
@@ -127,15 +128,11 @@ export default function App() {
     return p.length >= 2 ? `${p[0][0]}${p[1][0]}`.toUpperCase() : p[0].slice(0, 2).toUpperCase();
   };
 
-  const renderMain = () => {
-    switch (activeTab) {
-      case "Home":     return <HomeView profile={profile} onNavigate={(t) => setActiveTab(t as TabName)} />;
-      case "Library":  return <RecommendationsView />;
-      case "Projects": return <ProjectsView />;
-      case "About":    return <AboutView profile={profile} />;
-      default:         return <BlogView />;
-    }
+  const clearChat = () => {
+    setMessages([]);
   };
+
+
 
   /* ── Shared nav-item button ─────────────────────────────────── */
   const NavBtn = ({
@@ -188,7 +185,7 @@ export default function App() {
 
       {/* New chat */}
       <button
-        onClick={() => { setActiveTab("Home"); setMobileSidebarOpen(false); }}
+        onClick={() => { setActiveTab("Home"); clearChat(); setMobileSidebarOpen(false); }}
         title="New chat"
         className="w-9 h-9 flex items-center justify-center rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 shadow-sm transition cursor-pointer mb-2"
       >
@@ -227,7 +224,7 @@ export default function App() {
           <div className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex items-center justify-center shadow-sm">
             <span className="text-[13px] font-bold text-neutral-900 dark:text-neutral-100">DS</span>
           </div>
-          <span className="text-[15px] font-semibold text-neutral-900 dark:text-neutral-100 tracking-tight">Portfolio</span>
+          <span className="text-[15px] font-semibold text-neutral-900 dark:text-neutral-100 tracking-tight">Sarugeek</span>
         </div>
         <button
           onClick={toggleSidebar}
@@ -241,7 +238,7 @@ export default function App() {
       {/* Actions */}
       <div className="px-3 space-y-0.5">
         <button
-          onClick={() => { setActiveTab("Home"); setMobileSidebarOpen(false); }}
+          onClick={() => { setActiveTab("Home"); clearChat(); setMobileSidebarOpen(false); }}
           className="flex w-full items-center gap-3 rounded-2xl px-4 py-2.5 text-[15px] font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200/60 dark:hover:bg-white/5 hover:text-neutral-900 dark:hover:text-neutral-100 transition cursor-pointer"
         >
           <Plus className="h-5 w-5" />
@@ -280,7 +277,7 @@ export default function App() {
             </div>
             <div className="min-w-0 flex-1">
               <div className="truncate text-[14px] font-semibold text-neutral-900 dark:text-neutral-100">
-                {profile?.displayName || "Divyanshu Singh"}
+                {profile?.displayName || "Divyanshu Vashu"}
               </div>
               <div className="truncate text-[12px] text-neutral-500 dark:text-neutral-500">
                 {profile?.username || "vashusingh2004.jan"}
@@ -331,7 +328,7 @@ export default function App() {
             </button>
 
             <h1 className="text-[16px] font-semibold text-neutral-900 dark:text-neutral-100 tracking-tight">
-              {activeTab === "Home" ? "AI Portfolio" : activeTab}
+              {activeTab === "Home" ? "Sarugeek" : activeTab}
             </h1>
           </div>
 
@@ -346,19 +343,24 @@ export default function App() {
         </header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-y-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.18, ease: "easeOut" }}
-              className="min-h-full"
-            >
-              {renderMain()}
-            </motion.div>
-          </AnimatePresence>
+        <main className="flex-1 overflow-y-auto relative">
+          <div className="absolute inset-0">
+            <div className={activeTab === "Home" ? "h-full w-full block" : "hidden"}>
+              <HomeView profile={profile} onNavigate={(t) => setActiveTab(t as TabName)} messages={messages} setMessages={setMessages} />
+            </div>
+            <div className={activeTab === "Library" ? "h-full w-full block" : "hidden"}>
+              <RecommendationsView />
+            </div>
+            <div className={activeTab === "Projects" ? "h-full w-full block" : "hidden"}>
+              <ProjectsView />
+            </div>
+            <div className={activeTab === "About" ? "h-full w-full block" : "hidden"}>
+              <AboutView profile={profile} />
+            </div>
+            <div className={activeTab === "Blog" ? "h-full w-full block" : "hidden"}>
+              <BlogView />
+            </div>
+          </div>
         </main>
       </div>
 

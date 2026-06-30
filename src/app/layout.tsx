@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Portfolio Command",
-  description: "Divyanshu Singh portfolio command deck",
+  description: "Divyanshu Vashu portfolio command deck",
 };
 
 export default async function RootLayout({

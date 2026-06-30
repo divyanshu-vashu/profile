@@ -22,7 +22,7 @@ export default function AboutView({ profile }: AboutViewProps) {
   const [careerTimeline, setCareerTimeline] = useState<any[]>([]);
   const [localProfile, setLocalProfile] = useState<ProfileDetails | null>(null);
 
-  const activeProfile = localProfile || profile;
+  const activeProfile = profile || localProfile;
 
   const intervalRef = useRef<any>(null);
 
@@ -96,8 +96,8 @@ export default function AboutView({ profile }: AboutViewProps) {
             DS
           </div>
           <div>
-            <h2 className="font-headline-lg text-[22px] text-neutral-800">{activeProfile?.displayName || "Divyanshu Singh"}</h2>
-            <span className="font-mono text-xs text-neutral-400">{activeProfile?.username || "@divyanshu_dev"}</span>
+            <h2 className="font-headline-lg text-[22px] text-neutral-800">{activeProfile?.displayName || "Divyanshu Vashu"}</h2>
+            <span className="font-mono text-xs text-neutral-400">{activeProfile?.username || "@divyanshu-vashu"}</span>
           </div>
         </div>
 
